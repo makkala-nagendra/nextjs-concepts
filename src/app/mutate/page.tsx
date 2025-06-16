@@ -3,15 +3,17 @@ import { useState } from 'react';
 
 export default function MutatePage() {
   const [title, setTitle] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [submittedMovie, setSubmittedMovie] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    await fetch('/api/movies', {
+    const res = await fetch('/api/movies', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title }),
     });
-    setSubmitted(true);
+    const data = await res.json();
+    setSubmittedMovie(data.movie.title);
   }
 
   return (
@@ -27,7 +29,7 @@ export default function MutatePage() {
         />
         <button className="bg-blue-600 text-white px-4 py-1">Add</button>
       </form>
-      {submitted && <p className="text-green-600">Movie submitted!</p>}
+      {submittedMovie && <p className="text-green-600">✅ Added: {submittedMovie}</p>}
     </div>
   );
 }
