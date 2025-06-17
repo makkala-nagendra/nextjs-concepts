@@ -1,4 +1,4 @@
-import { connectToDB } from '@/app/lib/mongodb';
+import { connectToDB } from '@/lib/mongodb';
 import bcrypt from 'bcrypt';
 import { User } from '@/types/user';
 
