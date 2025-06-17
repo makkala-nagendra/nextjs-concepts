@@ -15,7 +15,7 @@ export default function Home() {
 
         <li><Link href="/mutate">Mutating Data</Link></li>
         <li><Link href="/accessibility">Accessibility</Link></li>
-        {/* <li><Link href="/auth">Authentication</Link></li> */}
+        <li><Link href="/auth">Authentication</Link></li>
         <li><Link href="/metadata">Metadata / SEO</Link></li>
       </ul>
     </main>
