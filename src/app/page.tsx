@@ -7,12 +7,12 @@ export default function Home() {
       <ul className="list-disc pl-4 space-y-2">
         <li><Link href="/routing">Basic Routing</Link></li>
         <li><Link href="/routing/dynamic/123">Dynamic Routing</Link></li>
-        <li><Link href="/fetching">fetching </Link></li>
+        <li><Link href="/fetching">Server-side fetching</Link></li>
+        <li><Link href="/fetching/client">Client-side fetching</Link></li>
         <li><Link href="/streaming">Streaming Example</Link></li>
         <li><Link href="/prerender">Partial Prerendering</Link></li>
         <li><Link href="/search-pagination">Search + Pagination</Link></li>
         <li><Link href="/error-handling">Error Handling</Link></li>
-
         <li><Link href="/mutate">Mutating Data</Link></li>
         <li><Link href="/accessibility">Accessibility</Link></li>
         <li><Link href="/auth">Authentication</Link></li>
